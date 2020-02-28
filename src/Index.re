@@ -1,4 +1,1 @@
-ReactDOMRe.renderToElementWithId(
-  <div><App /></div>,
-  "root",
-);
+ReactDOMRe.renderToElementWithId(<App />, "root");
