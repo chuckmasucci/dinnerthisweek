@@ -1,0 +1,30 @@
+schema:
+  - 'https://stitch.mongodb.com/api/client/v2.0/app/dinner-this-week-xgfuz/graphql':
+      headers:
+        - Authorization: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODMxNzI5ODAsImlhdCI6MTU4MzE3MTE4MCwiaXNzIjoiNWU1ZDQ2NmNmOTVjYTMzODEzYTZiNmJmIiwic3RpdGNoX2RldklkIjoiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwic3RpdGNoX2RvbWFpbklkIjoiNWU1MzEyZWVmOTQ3OTI1YjljMDkyYzcyIiwic3ViIjoiNWU1YjRiNzY5M2Y0Njk0YzZiMTNiZjczIiwidHlwIjoiYWNjZXNzIn0.vtL95eIuXivJ-t66qyftJa6Ewgf_QKJBm6NaD9yc0dQ
+documents: src/documents/**/*.graphql
+extensions:
+  codegen:
+    generates:
+      ./src/typedefs/Apollo.re:
+        config:
+          filterInputTypes: true
+          graphQLErrorTypeName: GraphQLError.t
+          graphqlTypesModuleName: Graphql
+          scalars:
+            DateTime: string
+            Json: string
+        plugins:
+          - reason-react-apollo
+      ./src/typedefs/Graphql.re:
+        config:
+          filterInputTypes: true
+          rootMutationTypeName: Mutation
+          rootQueryTypeName: Query
+          scalars:
+            DateTime: string
+            Json: string
+        plugins:
+          - reason-client

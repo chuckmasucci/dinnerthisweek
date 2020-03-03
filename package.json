@@ -7,32 +7,47 @@
     "start": "concurrently \"npm run js-watch\" \"npm run bsb-watch\"",
     "js-watch": "webpack-dev-server --hot --inline",
     "bsb-watch": "bsb -make-world -w",
-    "bsb-clean": "bsb -clean-world"
+    "bsb-clean": "bsb -clean-world",
+    "reasonql": "reasonql-compiler",
+    "codegen": "graphql-codegen"
   },
   "dependencies": {
-    "@glennsl/bs-json": "^5.0.2",
-    "bs-css": "^11.0.0",
-    "bs-fetch": "^0.5.2",
+    "@apollo/client": "^3.0.0-beta.38",
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",
+    "react-apollo": "^3.1.3",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
-    "reason-react": "^0.7.0"
+    "reason-future": "^2.5.0",
+    "reason-react": "^0.7.0",
+    "reason-react-hooks": "^0.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
+    "@graphql-codegen/cli": "1.11.1",
     "babel-loader": "^8.0.6",
     "bs-platform": "^7.1.1",
     "clean-webpack-plugin": "^3.0.0",
     "concurrently": "^5.1.0",
     "css-loader": "^3.4.2",
+    "graphql": "^14.6.0",
+    "graphql-codegen-reason-client": "^1.1.2",
+    "graphql-codegen-reason-react-apollo": "^1.1.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^1.1.3",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "graphql-cli": "4.0.1-beta.2",
+    "@test-graphql-cli/codegen": "4.0.1-beta.2",
+    "@test-graphql-cli/coverage": "4.0.1-beta.1",
+    "@test-graphql-cli/validate": "4.0.1-beta.1"
+  },
+  "private": true,
+  "author": {
+    "name": "Chuck Masucci"
   }
 }

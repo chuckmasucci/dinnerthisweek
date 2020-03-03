@@ -4,13 +4,8 @@ import * as React from "react";
 import * as Client from "@apollo/client";
 import * as ReactBootstrap from "react-bootstrap";
 
-var cache = {
-  resultCaching: true
-};
-
 var client = new Client.ApolloClient({
-      uri: "/graphql",
-      cache: cache
+      uri: "/graphql"
     });
 
 console.log(client);
@@ -35,7 +30,6 @@ function App(Props) {
 var make = App;
 
 export {
-  cache ,
   client ,
   make ,
   

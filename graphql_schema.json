@@ -1,0 +1,17 @@
+{
+  "title": "recipe",
+  "properties": {
+    "_id": {
+      "bsonType": "objectId"
+    },
+    "image": {
+      "bsonType": "string"
+    },
+    "title": {
+      "bsonType": "string"
+    },
+    "url": {
+      "bsonType": "string"
+    }
+  }
+}
