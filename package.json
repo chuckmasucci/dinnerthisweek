@@ -36,7 +36,7 @@
     "graphql-codegen-reason-client": "^1.1.2",
     "graphql-codegen-reason-react-apollo": "^1.1.2",
     "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "style-loader": "^1.1.3",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
